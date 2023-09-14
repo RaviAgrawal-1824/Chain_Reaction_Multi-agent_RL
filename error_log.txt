@@ -1,0 +1,24 @@
+updating the player before taking masked observation as per same player, the agent should know the cosequences and upadted state as per his view and available actions as per his view.
+need to perform bellmann update before updating player
+
+infinite recursive calls, even after each step.. when the values are high, the recursion of one step doesnot stops, need to check at each spread else infinte.
+
+when the agent has only one cell on his name and some empty cells and the agent choses his cell and his cell explodes, the value of that cell becomes 0 and while spreading update, all cells were of opponents and empty, it comes out of loop saying someone won and its not the player
+it was a great mystery to decode it as the calls were spread along some files and how the player who is taking the step can lose the game.
+
+making the cell empty or occupying some one cell then changing the owner.
+
+
+
+i masked the env to make opponent and agent seperate for both cases as same for agent, still someway agent learnt to maximise reward by minimising plays.
+At convergence, it started to end the game in 3 plays continuously
+
+i arranged seperate rewards for both players and add -ve of opponent reward to the player when they play as punishment, still same behaviour as after winning, that large punishment is not propagated.
+started updating both agents in same play.
+
+
+
+
+game link with gym, game gui representation, game play paltform, multi-player game, game grid size increased
+better game play strategy, so that agent identifies different opponent
+rewards issue of flappy bird
